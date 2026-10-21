@@ -3,25 +3,31 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
-    "start": "next start",
+    "dev": "bun --bun astro dev",
+    "build": "bun --bun astro build",
+    "preview": "bun --bun astro preview",
     "lint": "eslint"
   },
   "dependencies": {
+    "@astrojs/react": "^7.1.0",
+    "@floating-ui/react": "^0.27.20",
     "@lottiefiles/dotlottie-react": "^0.19.4",
-    "next": "^16.0.7",
+    "@tsparticles/react": "^4.4.0",
+    "@tsparticles/slim": "^4.4.0",
+    "astro": "^7.4.1",
+    "clsx": "^2.1.1",
     "react": "^19.2.1",
     "react-dom": "^19.2.1",
     "react-markdown": "^10.1.0",
-    "sass": "^1.93.2"
+    "sass": "^1.93.2",
+    "tailwind-merge": "^3.7.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.4",
     "@tailwindcss/postcss": "^4.3.0",
     "eslint": "^9.39.4",
-    "eslint-config-next": "^0.2.4",
     "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-astro": "^3.2.1",
     "eslint-plugin-react": "^7.37.5",
     "globals": "^17.6.0",
     "prettier": "^3.8.3"

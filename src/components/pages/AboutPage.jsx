@@ -1,20 +1,15 @@
-'use client';
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
 import { themeSettings } from '@/lib/constants';
+import { withBase } from '@/lib/url';
 
-const AboutPage = () => {
+const AboutPage = ({ children }) => {
   const { globalWidth, globalHeight } = themeSettings;
 
   return (
     <>
-      <title>About</title>
-
       <div className="content-container about">
         <div>
-          <Image
-            src="/favicon.ico"
+          <img
+            src={withBase('/favicon.ico')}
             alt="main-photo-page"
             className="main-photo"
             width={200}
@@ -26,8 +21,8 @@ const AboutPage = () => {
           <p className="about-text">
             {' '}
             Junior{' '}
-            <Image
-              src="/logo.svg"
+            <img
+              src={withBase('/logo.svg')}
               alt="react-logo"
               width={32}
               height={32}
@@ -35,110 +30,110 @@ const AboutPage = () => {
             />{' '}
             React web developer working in fintech. Interested in game
             development, especially of grand strategy games, as well as
-            urbanistics and architecture. Also, a <a href="/coshka.jpeg">🐈</a>{' '}
+            urbanistics and architecture. Also, a {children}{' '}
             lives with me.
           </p>
         </div>
       </div>
       <div className="content-container icons-container">
-        <Link
+        <a
           href="https://soundcloud.com/user-735227306"
           target="_blank"
           rel="noopener noreferrer"
           title="SoundCloud"
         >
-          <Image
+          <img
             width={globalWidth}
             height={globalHeight}
-            src="/SoundCloud.png"
+            src={withBase('/SoundCloud.png')}
             alt="SoundCloud"
             className="icon spin-ccw"
           />
-        </Link>
-        <Link
+        </a>
+        <a
           href="https://open.spotify.com/user/31lpevsqaz6ftqu23sk2vddr3pdq?si=e4b3c22b1a0147e7"
           target="_blank"
           rel="noopener noreferrer"
           title="Spotify"
         >
-          <Image
+          <img
             width={globalWidth}
             height={globalHeight}
-            src="/Spotify.png"
+            src={withBase('/Spotify.png')}
             alt="Spotify"
             className="icon spin-cw"
           />
-        </Link>
-        <Link
+        </a>
+        <a
           href="https://steamcommunity.com/id/juzzyboykin"
           target="_blank"
           rel="noopener noreferrer"
           title="Steam"
         >
-          <Image
+          <img
             width={globalWidth}
             height={globalHeight}
-            src="/Steam.png"
+            src={withBase('/Steam.png')}
             alt="Steam"
             className="icon spin-ccw"
           />
-        </Link>
-        <Link
+        </a>
+        <a
           href="https://www.linkedin.com/in/mikhail-kolyakin-946734259/"
           target="_blank"
           rel="noopener noreferrer"
           title="LinkedIn"
         >
-          <Image
+          <img
             width={globalWidth}
             height={globalHeight}
-            src="/LinkedIn.png"
+            src={withBase('/LinkedIn.png')}
             alt="LinkedIn"
             className="icon spin-cw"
           />
-        </Link>
-        <Link
+        </a>
+        <a
           href="https://github.com/boykin345"
           target="_blank"
           rel="noopener noreferrer"
           title="GitHub"
         >
-          <Image
+          <img
             width={globalWidth}
             height={globalHeight}
-            src="/github.png"
+            src={withBase('/github.png')}
             alt="GitHub"
             className="icon spin-ccw icon-large"
           />
-        </Link>
-        <Link
+        </a>
+        <a
           href="https://x.com/BoyKin345"
           target="_blank"
           rel="noopener noreferrer"
           title="Twitter"
         >
-          <Image
+          <img
             width={globalWidth}
             height={globalHeight}
-            src="/Twitter.png"
+            src={withBase('/Twitter.png')}
             alt="Twitter"
             className="icon spin-cw"
           />
-        </Link>
-        <Link
+        </a>
+        <a
           href="https://www.reddit.com/user/Substantial-Purple60/"
           target="_blank"
           rel="noopener noreferrer"
           title="Reddit"
         >
-          <Image
+          <img
             width={globalWidth}
             height={globalHeight}
-            src="/Reddit.png"
+            src={withBase('/Reddit.png')}
             alt="Reddit"
             className="icon spin-ccw"
           />
-        </Link>
+        </a>
       </div>
     </>
   );

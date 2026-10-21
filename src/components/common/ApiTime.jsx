@@ -1,5 +1,4 @@
-'use client';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const ApiTime = () => {
   const [time, setTime] = useState(new Date());

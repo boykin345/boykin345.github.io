@@ -1,36 +1,29 @@
-'use client';
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import React from 'react';
-import arrow from '../../../public/lottie1.json';
+import { withBase } from '@/lib/url';
 
-const Navbar = () => {
-  const pathname = usePathname(); // get current path
+const links = [
+  { href: '/', label: 'About' },
+  { href: '/blog/', label: 'Blog' },
+  { href: '/contact/', label: 'Contact Me' },
+];
 
-  const links = [
-    { href: '/', label: 'About' },
-    { href: '/blog', label: 'Blog' },
-    { href: '/contact', label: 'Contact Me' },
-  ];
-
+const Navbar = ({ pathname, children }) => {
   return (
     <div className="nav content-container">
       {links.map((link) => {
         const isActive = pathname === link.href;
         return (
-          <Link
+          <a
             key={link.href}
-            href={link.href}
+            href={withBase(link.href)}
             className={`relative px-2 ${isActive ? 'active logo' : 'logo'}`}
           >
             {link.label}
-          </Link>
+          </a>
         );
       })}
       <div className="site-animation">
-        <Link href="/new">v2</Link>
-        <DotLottieReact data={arrow} loop autoplay />
+        <a href={withBase('/new/')}>v2</a>
+        {children}
       </div>
     </div>
   );

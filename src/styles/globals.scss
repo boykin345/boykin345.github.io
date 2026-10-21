@@ -373,7 +373,7 @@ h3 {
   .blog-container {
     max-width: 95vw;
     display: flex;
-    flex-direction: column; /* Stack the blog posts */
+    flex-direction: column;
     overflow-x: hidden;
   }
 
@@ -392,7 +392,46 @@ h3 {
   }
 }
 
+.icons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+
+  a {
+    display: flex;
+  }
+}
+
 .icon-large {
   width: 80px;
   height: 80px;
+}
+
+.starfield {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  canvas {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+.cat-tooltip {
+  z-index: 1100;
+  pointer-events: none;
+}
+
+.cat-tooltip-image {
+  display: block;
+  width: 180px;
+  height: 240px;
+  object-fit: cover;
+  border: 0.0625rem solid $primary-color;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.6);
 }

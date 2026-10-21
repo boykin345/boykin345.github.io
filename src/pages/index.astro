@@ -1,0 +1,11 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import AboutPage from '@/components/pages/AboutPage';
+import Tooltip from '@/components/common/Tooltip';
+---
+
+<BaseLayout title="About">
+  <AboutPage>
+    <Tooltip client:idle />
+  </AboutPage>
+</BaseLayout>
