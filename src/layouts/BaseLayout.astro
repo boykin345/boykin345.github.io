@@ -11,7 +11,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const pathname = Astro.url.pathname.slice(base.length) || '/';
 ---
 
-<html lang="en">
+<html lang="en" transition:animate="none">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -21,7 +21,7 @@ const pathname = Astro.url.pathname.slice(base.length) || '/';
   </head>
   <body>
     <Navbar pathname={pathname}>
-      <SiteAnimation client:load transition:persist="site-animation" />
+      <SiteAnimation client:load/>
     </Navbar>
     <slot />
   </body>
