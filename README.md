@@ -1,1 +1,1 @@
-# Personal [Website](https://mikhailkolyakin.com)
+# Personal [Website](boykin345.github.io/)
