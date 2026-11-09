@@ -1,12 +1,9 @@
-"use client";
-import React from "react";
 
-function MyMacConfig() {
+function MyMacConfig({ children }) {
   return (
     <>
-      <title>My Mac Config</title>
-
       <div className=' content-container blog-container'>
+        {children}
         <h1 className='about-text'>My Mac Config</h1>
         <div className='code-container'>
           <pre className='code-block'>

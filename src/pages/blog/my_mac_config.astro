@@ -1,0 +1,11 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import MyMacConfig from '@/components/pages/blog_pages/MyMacConfig';
+import StarField from '@/components/common/StarField';
+---
+
+<BaseLayout title="My Mac Config">
+  <MyMacConfig>
+    <StarField id="stars-mymacconfig" client:idle />
+  </MyMacConfig>
+</BaseLayout>

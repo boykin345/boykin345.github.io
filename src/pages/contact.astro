@@ -1,0 +1,11 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ContactPage from '@/components/pages/ContactPage';
+import ApiTime from '@/components/common/ApiTime';
+---
+
+<BaseLayout title="Contact">
+  <ContactPage>
+    <ApiTime client:load />
+  </ContactPage>
+</BaseLayout>

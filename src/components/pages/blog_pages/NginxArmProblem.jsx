@@ -1,11 +1,7 @@
-"use client";
-import React from "react";
 
 function NginxARMProblem() {
   return (
     <>
-      <title>Nginx ARM Problem</title>
-
       <div className='content-container blog-container'>
         <h1 className='about-text'>Nginx Compatibility Issue</h1>
         <p className='about-text'>
