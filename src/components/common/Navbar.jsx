@@ -22,7 +22,9 @@ const Navbar = ({ pathname, children }) => {
         );
       })}
       <div className="site-animation">
-        <a href={withBase('/new/')}>v2</a>
+        <a href={withBase('/new/')} data-astro-reload data-astro-prefetch="false">
+          v2
+        </a>
         {children}
       </div>
     </div>

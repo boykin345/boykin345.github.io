@@ -8,4 +8,6 @@ export default defineConfig({
   base: '/',
   trailingSlash: 'always',
   build: { format: 'directory' },
+  // Prefetch every internal link on hover/focus, like bun.com
+  prefetch: { prefetchAll: true, defaultStrategy: 'hover' },
 });
