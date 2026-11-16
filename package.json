@@ -1,35 +1,37 @@
 {
-  "name": "website_on_next",
+  "name": "boykin345.github.io",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
+  "imports": {
+    "#lib/*": "./src/lib/*"
+  },
   "scripts": {
-    "dev": "bun --bun astro dev",
-    "build": "bun --bun astro build",
-    "preview": "bun --bun astro preview",
+    "dev": "bunx --bun vite dev",
+    "build": "bunx --bun vite build",
+    "preview": "bunx --bun vite preview",
+    "prepare": "svelte-kit sync || echo ''",
     "lint": "eslint"
   },
   "dependencies": {
-    "@astrojs/react": "^7.1.0",
-    "@floating-ui/react": "^0.27.20",
-    "@lottiefiles/dotlottie-react": "^0.19.4",
-    "@tsparticles/react": "^4.4.0",
-    "@tsparticles/slim": "^4.4.0",
-    "astro": "^7.4.1",
-    "clsx": "^2.1.1",
-    "react": "^19.2.1",
-    "react-dom": "^19.2.1",
-    "react-markdown": "^10.1.0",
-    "sass": "^1.93.2",
-    "tailwind-merge": "^3.7.0"
+    "@floating-ui/dom": "^1.8.0",
+    "@lottiefiles/dotlottie-web": "^0.82.1",
+    "@tsparticles/engine": "^4.5.3",
+    "@tsparticles/slim": "^4.5.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.4",
-    "@tailwindcss/postcss": "^4.3.0",
+    "@sveltejs/adapter-static": "^4.0.1",
+    "@sveltejs/kit": "^3.2.0",
+    "@sveltejs/vite-plugin-svelte": "^7.3.1",
     "eslint": "^9.39.4",
-    "eslint-config-prettier": "^6.15.0",
-    "eslint-plugin-astro": "^3.2.1",
-    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-svelte": "^3.24.1",
     "globals": "^17.6.0",
-    "prettier": "^3.8.3"
+    "mdsvex": "^0.12.8",
+    "prettier": "^3.8.3",
+    "prettier-plugin-svelte": "^3.4.0",
+    "sass": "^1.93.2",
+    "svelte": "^5.57.3",
+    "vite": "^8.3.8"
   }
 }

@@ -1,28 +1,15 @@
 import js from '@eslint/js';
 import globals from 'globals';
-import pluginReact from 'eslint-plugin-react';
-import pluginAstro from 'eslint-plugin-astro';
+import svelte from 'eslint-plugin-svelte';
 import { defineConfig, globalIgnores } from 'eslint/config';
 
 export default defineConfig([
-  globalIgnores(['dist/', '.astro/', 'node_modules/']),
+  globalIgnores(['dist/', '.svelte-kit/', 'node_modules/']),
+  js.configs.recommended,
+  ...svelte.configs.recommended,
   {
-    files: ['**/*.{js,mjs,cjs,jsx}'],
-    plugins: { js },
-    extends: ['js/recommended'],
-    languageOptions: { globals: globals.browser },
-  },
-  {
-    files: ['**/*.jsx'],
-    extends: [pluginReact.configs.flat.recommended, pluginReact.configs.flat['jsx-runtime']],
-    settings: { react: { version: 'detect' } },
-    rules: {
-      'react/prop-types': 'off',
-    },
-  },
-  pluginAstro.configs.recommended,
-  {
-    files: ['*.config.{js,mjs,cjs}'],
-    languageOptions: { globals: globals.node },
+    languageOptions: { globals: { ...globals.browser, ...globals.node } },
+    // Site is served from the domain root (no base path), so plain hrefs are fine.
+    rules: { 'svelte/no-navigation-without-resolve': 'off' },
   },
 ]);

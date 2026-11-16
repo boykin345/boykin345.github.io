@@ -8,7 +8,7 @@
 !.yarn/versions
 /coverage
 /dist/
-/.astro/
+/.svelte-kit/
 .DS_Store
 *.pem
 npm-debug.log*
@@ -19,3 +19,4 @@ yarn-error.log*
 .vercel
 *.tsbuildinfo
 .idea/workspace.xml
+vite.config.js.timestamp-*
