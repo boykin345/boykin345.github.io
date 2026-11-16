@@ -17,6 +17,7 @@ concurrency:
 
 jobs:
   build:
+    timeout-minutes: 10
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -24,7 +25,7 @@ jobs:
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
         with:
-          bun-version: latest
+          bun-version: 1.4.4
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Install dependencies
